@@ -13,7 +13,7 @@ export default function GameHeader({ state }: { state: GameState }) {
           <span className="text-2xl">🏫</span>
           <div>
             <div className="font-bold text-base leading-tight">서울대 총장 타이쿤</div>
-            <div className="text-blue-300 text-xs">이석재 총장 후보 · 철학과</div>
+            <div className="text-blue-300 text-xs">Seoul National University President Simulator</div>
           </div>
         </div>
 

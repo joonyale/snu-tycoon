@@ -13,7 +13,7 @@ export default function EndingScreen({ state, onRestart }: Props) {
         <div className="text-center">
           <div className="text-6xl mb-4">{isGoodEnding ? "🎓" : "😔"}</div>
           <h1 className="text-3xl font-bold">
-            {isGoodEnding ? "이석재 총장, 서울대를 바로 세우다" : "혼란은 아직 끝나지 않았다"}
+            {isGoodEnding ? "차기 총장, 서울대를 바로 세우다" : "혼란은 아직 끝나지 않았다"}
           </h1>
           <div className="flex justify-center gap-6 mt-4 text-sm text-gray-400">
             <span>최종 지지율 <strong className="text-white text-lg">{state.approval}%</strong></span>
@@ -25,7 +25,7 @@ export default function EndingScreen({ state, onRestart }: Props) {
         {/* Message */}
         {isGoodEnding ? (
           <div className="bg-blue-950 border border-blue-700 rounded-2xl p-7 space-y-5">
-            <div className="text-blue-400 font-bold text-sm uppercase tracking-wider">📜 이석재 총장 취임사</div>
+            <div className="text-blue-400 font-bold text-sm uppercase tracking-wider">📜 차기 총장 취임사</div>
             <blockquote className="text-gray-100 leading-relaxed text-lg italic border-l-4 border-blue-500 pl-5">
               "AI가 모든 것을 계산할 수 있는 시대일수록,
               우리는 더 깊이 물어야 합니다.
@@ -37,7 +37,7 @@ export default function EndingScreen({ state, onRestart }: Props) {
               수백 년 인문학의 질문 위에,
               AI 시대의 새로운 답을 쌓겠습니다."
             </blockquote>
-            <div className="text-right text-gray-400 text-sm">— 이석재, 제28대 서울대학교 총장</div>
+            <div className="text-right text-gray-400 text-sm">— 제28대 서울대학교 총장</div>
 
             <div className="grid grid-cols-3 gap-3 mt-4">
               {[
@@ -62,7 +62,7 @@ export default function EndingScreen({ state, onRestart }: Props) {
               여전히 구성원들을 흔들고 있습니다.
             </p>
             <p className="text-gray-400 leading-relaxed text-sm">
-              이석재 후보의 비전 — <em>"AI 시대의 휴머니티"</em> — 을 실현하려면
+              차기 총장의 비전 — <em>"AI 시대의 휴머니티"</em> — 을 실현하려면
               먼저 혼란도를 낮추고 지지율을 높여야 합니다.
               다시 도전해보세요.
             </p>
