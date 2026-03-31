@@ -18,7 +18,7 @@ export default function IntroScreen({ onStart }: Props) {
             <span>🌀</span> 현재 상황
           </div>
           <p className="text-gray-200 leading-relaxed">
-            정치학과 출신 <span className="text-red-300 font-semibold">유홍림 총장</span>은
+            현 총장은 <span className="text-red-300 font-semibold">유홍림 총장</span>으로,
             재임 중 <span className="text-yellow-300">학부대학</span>,{" "}
             <span className="text-yellow-300">첨단융합학부</span>,{" "}
             <span className="text-yellow-300">AI대학원</span> 등
@@ -40,8 +40,7 @@ export default function IntroScreen({ onStart }: Props) {
             <span>🎯</span> 당신의 임무
           </div>
           <p className="text-gray-200 leading-relaxed">
-            차기 총장 후보{" "}
-            <span className="text-blue-300 font-semibold">철학과 이석재 교수</span>로서,
+            차기 총장 후보로서,
             전임 총장이 남긴 혼란을 수습하고 대학을 바로 세워야 합니다.
           </p>
           <p className="text-gray-300 leading-relaxed">
