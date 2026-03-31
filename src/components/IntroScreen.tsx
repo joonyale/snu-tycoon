@@ -46,7 +46,7 @@ export default function IntroScreen({ onStart }: Props) {
           <p className="text-gray-300 leading-relaxed">
             AI 시대, 기술 만능주의에 휩쓸린 대학에
             <span className="text-blue-300 font-semibold"> 휴머니티의 가치</span>를 되살리는 것이
-            이석재 후보의 비전입니다.
+            차기 총장 후보의 비전입니다.
           </p>
         </div>
 
