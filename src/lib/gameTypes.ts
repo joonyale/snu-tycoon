@@ -256,17 +256,72 @@ export const UPGRADES: Upgrade[] = [
   },
 ];
 
-export type GamePhase = "playing" | "shop" | "game-over";
+// 혼란 안건 — 이전 총장의 미결정 유산
+export const CHAOS_TEMPLATES: IssueTemplate[] = [
+  {
+    title: "🚨 학부대학 설립 방향 또 바뀜",
+    emoji: "🌀",
+    department: "전 총장 유산",
+    requiredResources: ["student", "professor", "facility", "budget"],
+    baseReward: 10,
+  },
+  {
+    title: "🚨 첨단융합학부 정원·교수 미확정",
+    emoji: "🌀",
+    department: "전 총장 유산",
+    requiredResources: ["professor", "student", "budget"],
+    baseReward: 10,
+  },
+  {
+    title: "🚨 AI대학원 예산 집행 근거 없음",
+    emoji: "🌀",
+    department: "전 총장 유산",
+    requiredResources: ["budget", "research", "professor"],
+    baseReward: 10,
+  },
+  {
+    title: "🚨 학부대학 교수 보직 공석 사태",
+    emoji: "🌀",
+    department: "전 총장 유산",
+    requiredResources: ["professor", "budget"],
+    baseReward: 8,
+  },
+  {
+    title: "🚨 첨단융합학부 학생들 소속 혼란",
+    emoji: "🌀",
+    department: "전 총장 유산",
+    requiredResources: ["student", "facility"],
+    baseReward: 8,
+  },
+  {
+    title: "🚨 AI대학원 입학생 커리큘럼 공백",
+    emoji: "🌀",
+    department: "전 총장 유산",
+    requiredResources: ["research", "professor", "student"],
+    baseReward: 10,
+  },
+  {
+    title: "🚨 미결 사업 3개 동시 감사 착수",
+    emoji: "🌀",
+    department: "전 총장 유산",
+    requiredResources: ["budget", "recognition", "professor", "facility"],
+    baseReward: 12,
+  },
+];
+
+export type GamePhase = "intro" | "playing" | "shop" | "ending";
 
 export type GameState = {
   phase: GamePhase;
-  approval: number;    // 지지율 (머니 대신)
-  term: number;        // 임기 (day 대신)
-  resolved: number;    // 이번 학기 해결 안건
-  failed: number;      // 놓친 안건
+  approval: number;
+  chaos: number;       // 혼란도 0~100 — 높을수록 혼란 안건 폭탄
+  term: number;
+  resolved: number;
+  failed: number;
   totalResolved: number;
   issues: Issue[];
   assembly: ResourceId[];
   upgradeLevels: Record<string, number>;
-  termTarget: number;  // 이번 학기 목표
+  termTarget: number;
+  maxTerms: number;    // 총 임기 수 (이걸 다 채우면 엔딩)
 };

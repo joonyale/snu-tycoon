@@ -5,10 +5,13 @@ import GameHeader from "@/components/GameHeader";
 import IssueCard from "@/components/CustomerCard";
 import ResourcePanel from "@/components/Kitchen";
 import UpgradeShop from "@/components/UpgradeShop";
+import IntroScreen from "@/components/IntroScreen";
+import EndingScreen from "@/components/EndingScreen";
 
 export default function Home() {
   const {
     state,
+    startGame,
     addResource,
     removeLastResource,
     clearAssembly,
@@ -18,18 +21,15 @@ export default function Home() {
     restart,
   } = useGameState();
 
-  if (state.phase === "shop") {
-    return (
-      <UpgradeShop state={state} onBuy={buyUpgrade} onNextTerm={nextTerm} />
-    );
-  }
+  if (state.phase === "intro") return <IntroScreen onStart={startGame} />;
+  if (state.phase === "ending") return <EndingScreen state={state} onRestart={restart} />;
+  if (state.phase === "shop") return <UpgradeShop state={state} onBuy={buyUpgrade} onNextTerm={nextTerm} />;
 
   return (
     <div className="min-h-screen bg-slate-100 flex flex-col">
       <GameHeader state={state} />
 
       <div className="flex-1 grid grid-cols-[1fr_340px] gap-6 p-6 max-w-5xl mx-auto w-full">
-        {/* Left: Issues */}
         <div>
           <h2 className="font-bold text-gray-500 text-sm uppercase tracking-wider mb-3">
             결재 대기 안건
@@ -46,7 +46,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right: Resource panel */}
         <ResourcePanel
           assembly={state.assembly}
           onAdd={addResource}
