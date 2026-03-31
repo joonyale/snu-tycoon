@@ -41,9 +41,9 @@ export default function EndingScreen({ state, onRestart }: Props) {
 
             <div className="grid grid-cols-3 gap-3 mt-4">
               {[
-                { icon: "🧠", title: "AI × 인문학 융합", desc: "기술과 철학이 함께하는 커리큘럼" },
-                { icon: "🤝", title: "결정하는 리더십", desc: "혼란 없는 명확한 의사결정 체계" },
-                { icon: "🌱", title: "학생 중심 대학", desc: "구성원이 신뢰하는 열린 행정" },
+                { icon: "🤝", title: "사회로부터 지지받는 서울대", desc: "구성원과 시민이 신뢰하는 열린 대학" },
+                { icon: "🌍", title: "세계 대학과 어깨를 나란히", desc: "글로벌 연구·교육 경쟁력 강화" },
+                { icon: "🧠", title: "AI 시대의 교육 선도", desc: "기술과 인문이 함께하는 미래 교육" },
               ].map((v) => (
                 <div key={v.title} className="bg-blue-900/40 rounded-xl p-3 text-center">
                   <div className="text-2xl mb-1">{v.icon}</div>
