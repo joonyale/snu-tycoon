@@ -18,7 +18,7 @@ export default function IntroScreen({ onStart }: Props) {
             <span>🌀</span> 현재 상황
           </div>
           <p className="text-gray-200 leading-relaxed">
-            현 총장은 <span className="text-red-300 font-semibold">유홍림 총장</span>으로,
+            현 총장은
             재임 중 <span className="text-yellow-300">학부대학</span>,{" "}
             <span className="text-yellow-300">첨단융합학부</span>,{" "}
             <span className="text-yellow-300">AI대학원</span> 등
